@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/aboutMeFragment">
+
+    <fragment
+        android:id="@+id/aboutMeFragment"
+        android:name="com.sotrh.portfolio.AboutMeFragment"
+        android:label="@string/about_me_title"
+        tools:layout="@layout/fragment_about_me"/>
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.sotrh.portfolio.weather.WeatherFragment"
+        android:label="@string/weather_title"
+        tools:layout="@layout/fragment_weather" />
+</navigation>

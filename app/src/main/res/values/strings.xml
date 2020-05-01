@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Portfolio</string>
+    <string name="about_me_header">I\'m Ben Hansen</string>
+    <string name="about_me_body">
+        I\'ve been programming since a young. I got my start as an Android developer at Brigham Young University
+        \n\n
+        I like games from <i>The Legend of Zelda</i> series, going on walks, and all sorts of dogs.
+    </string>
+    <string name="about_me_button">Click Me!</string>
+    <string name="about_me_img_description">A picture of me</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="portfolio_title">Portfolio</string>
+    <string name="about_me_title">About Me</string>
+    <string name="weather_icon_404">Unable to retrieve weather icon</string>
+    <string name="weather_temperature_404">--°</string>
+    <string name="weather_location_404">----</string>
+    <string name="weather_404">---</string>
+    <string name="weather_title">Weather</string>
+    <string name="weather_temperature">%1$d°</string>
+</resources>
