@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import com.sotrh.portfolio.R
 import kotlinx.android.synthetic.main.fragment_weather.*
+import kotlinx.android.synthetic.main.view_weather.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -32,21 +33,15 @@ class WeatherFragment : Fragment() {
         val dateFormat = SimpleDateFormat("EEEE h a", Locale.getDefault())
         weather_day.text = dateFormat.format(currentTime)
 
+        progressBar.visibility = View.VISIBLE
+
         val model: WeatherViewModel by viewModels()
         model.getForecastPeriods(39.7456,-97.0892).observe(viewLifecycleOwner) {
-            weather_location.text = "${it.city}, ${it.state}"
+            progressBar.visibility = View.GONE
+            weather_location.text = getString(R.string.weather_location, it.city, it.state)
             weather_condition.text = it.shortForecast
-            weather_temperature.text = "${it.temperature}°${it.temperatureUnit}"
+            weather_temperature.text = getString(R.string.weather_temperature, it.temperature, it.temperatureUnit)
         }
-
-//        val location = "Provo, Utah"
-//        weather_location.text = location
-//
-//        val condition = "Sunny"
-//        weather_condition.text = condition
-//
-//        val temperature = getString(R.string.weather_temperature, 79)
-//        weather_temperature.text = temperature
 
     }
 }

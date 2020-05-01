@@ -16,5 +16,6 @@
     <string name="weather_location_404">----</string>
     <string name="weather_404">---</string>
     <string name="weather_title">Weather</string>
-    <string name="weather_temperature">%1$d°</string>
+    <string name="weather_temperature">%1$d°%2$s</string>
+    <string name="weather_location">%1$s, %2$s</string>
 </resources>
