@@ -7,12 +7,15 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import kotlinx.coroutines.Deferred
+import retrofit2.http.POST
 
 interface WeatherAPI {
     @GET("points/{lat},{lon}")
     fun getOfficeByLocationAsync(
-        @Path("lat") lat: Double,
-        @Path("lon") lon: Double
+        @Path("lat")
+        lat: Double,
+        @Path("lon")
+        lon: Double
     ): Deferred<OfficeByLocationData>
 
     @GET("gridpoints/{office}/{gridX},{gridY}/forecast")
